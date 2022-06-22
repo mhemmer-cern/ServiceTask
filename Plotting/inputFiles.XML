@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<input3DSpline>
+	<FILE>/home/mhemmer/Documents/ServiceTask/Trees/CorrectionCompProfiles_Average.root</FILE>
+</input3DSpline>
+<inputSplinevs3D>
+	<FILE>/home/mhemmer/Documents/ServiceTask/Trees/CorrectionCompProfilesSplines_Average.root</FILE>
+</inputSplinevs3D>

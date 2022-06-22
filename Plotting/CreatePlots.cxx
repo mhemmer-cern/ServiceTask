@@ -18,6 +18,10 @@
 #include "TString.h"
 using namespace PlottingFramework;
 
+std::string str_xglobal = "#it{x}_{global}";
+std::string str_yglobal = "#it{y}_{global}";
+std::string str_xlocal = "#it{x}_{local}";
+std::string str_ylocal = "#it{y}_{local}";
 std::string str_raxis = "#it{r} (cm)";
 std::string str_draxis = "#it{dr}_{map}-#it{dr}_{spline} (#mum)";
 std::string str_phiaxis = "#it{#varphi} (rad)";
@@ -36,20 +40,32 @@ std::string str_dqpt = "#Deltaq/#it{p}_{T} (ec/GeV)";
 std::string str_phi = "#it{#varphi} (rad)";
 std::string str_NCluster = "#it{N}_{cluster}";
 
+std::vector<int> vz = {0, 10, 50, 100, 150, 250};
+std::vector<TString> CT = {"(rC-rT)*10000"};
+std::vector<TString> CCD = {"(rC+rCD)*10000"};
+std::vector<TString> DCD = {"(rDC+rD)*10000"};
+// std::vector<TString> DTD = {"(rDC+rD)*10000"};
 
-std::vector<int> vBinning = {500, 500, 400, 200, 200, 300, 18, 200, 180};
-std::vector<float> vLow   = {-2.5, -1., -4, -0.6, -0.1, -1.5, 00, 000.0, -0.0};
-std::vector<float> vHigh  = {+2.5, +4., +4, +0.6, +0.1, +1.5, 18, 200.0, 2.*M_PI};
-std::vector<const char*> vTStr_2 = {"X", "Y", "Z", "SinPhi", "TanLam", "QPt", "Sector", "NCluster", "Phi"};
-std::vector<std::string> vCuts = {"status>=0", "NCluster_Ref>=60&&status>=0", "Z_Ref>0&&status>=0", "Z_Ref<0&&status>=0"};
-std::vector<const char*> vCutName_2 = {"Standard", "NClusterCut", "A-Side", "C-Side"};
+std::string Var_CT = {"d#it{r}_{CT} (#mum)"};
+std::string Var_CCD = {"d#it{r}_{CCD} (#mum)"};
+std::string Var_DCD = {"d#it{r}_{DCD} (#mum)"};
+// std::vector<std::string> vVar_DTD = {"d#it{r}_{DTD} (#mum)"};
 
-std::vector<std::string> vStr_Axis = {str_dx, str_dy, str_dz, str_dsinphi, str_dtgl, str_dqpt};
-std::vector<std::string> vCutName = {"Standard", "NClusterCut", "A-Side", "C-Side"};
+std::vector<TString> Variable = {"dr"};
+std::vector<TString> VariableBinning = {"600,-150,150"};
 
-std::vector<std::string> vOutFileName = {"inputTPC_Tracking_PiMi_Comp_AvgCorr", "inputTPC_Tracking_PiPl_Comp_AvgCorr", "inputTPC_Tracking_PiMi_Comp_NoCorr", "inputTPC_Tracking_PiPl_Comp_NoCorr", "inputTPC_Tracking_PiMi_Comp_ResidualDist", "inputTPC_Tracking_PiPl_Comp_ResidualDist", "inputTPC_Tracking_PiMi_Comp_3DCorr", "inputTPC_Tracking_PiPl_Comp_3DCorr"};
-std::vector<std::string> vCategory = {"Boxgen/PiMi/AvgCorr", "Boxgen/PiPl/AvgCorr", "Boxgen/PiMi/NoCorr", "Boxgen/PiPl/NoCorr", "Boxgen/PiMi/ResidualDist", "Boxgen/PiPl/ResidualDist", "Boxgen/PiMi/3DCorr", "Boxgen/PiPl/3DCorr"}; 
-std::vector<const char*> vLatexText = {"boxgen sim #pi^{-} // avg. correction", "boxgen sim #pi^{+} // avg. correction", "boxgen sim #pi^{-} // no correction", "boxgen sim #pi^{+} // no correction", "boxgen sim #pi^{-} // residual distortion", "boxgen sim #pi^{+} // residual distortion", "boxgen sim #pi^{-} // 3D correction", "boxgen sim #pi^{+} // 3D correction"};
+std::vector<TString> Cut = {"inTPC==0"};
+std::vector<TString> CutName = {"inTPC"};
+
+                              // 0    1    2         3             4         5
+std::vector<TString> Axis = {"phi", "row","r", "phi/3.1415*18", "gx:gy", "lx:ly"};
+std::vector<TString> AxisText{"phi", "row", "r", "sector", "gxy" ,"lxy"};
+std::vector<std::string> AxisText_2{"#varphi (rad)", "row", "#it{r} cm", "sector"};
+std::vector<TString> AxisBinning = {"360,-3.1415,3.1415", "152,0,152", "280,0,280", "18,0,18", "500,-250,250,500,-250,250", "200,-50,50,340,80,250"};
+std::vector<std::string> vInput = {"inputSplinevs3D", "input3DSpline"};
+std::vector<std::string> vStructure = {"Spline_vs_3D", "3D_for_Splines"};
+std::vector<std::vector<std::string>> v2Daxis = {{str_xglobal, str_yglobal}, {str_xlocal, str_ylocal}};
+
 
 
 // helper that creates some good looking plot tempaltes you can base your plots on
@@ -70,48 +86,27 @@ int main(int argc, char *argv[])
   // the plot manager is the central entity that handles and creates your plots
   PlotManager plotManager;
 
-  //Standard Source------------------------------------------------------------
-  // plotManager.AddInputDataFiles("input50kHz", {"/media/marvin/Samsung_T5/Arbeiten/ServiceTask/FirstResult/spaceChargeDensityHist_average.root"});
-  plotManager.AddInputDataFiles("input50kHz", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/Output.root"});
-  //----------------------------------------------------------------------------
-  plotManager.AddInputDataFiles("inputDistCorr50kHzRandomA", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/OutputRandom_A.root"});  // Random distortion object A side
-  plotManager.AddInputDataFiles("inputDistCorr50kHzRandomC", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/OutputRandom_C.root"});  // Random distortion object C side
-  //----------------------------------------------------------------------------
-  plotManager.AddInputDataFiles("inputCorrectionComp50kHzRandom", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/CorrectionCompProfiles.root"});
-  //----------------------------------------------------------------------------
-  plotManager.AddInputDataFiles("inputCorrectionComp50kHzAverage", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/CorrectionCompProfiles_Average.root"});
-  //----------------------------------------------------------------------------
-  plotManager.AddInputDataFiles("inputTPC_Tracking_PiMi_Comp_AvgCorr", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/FirstResult/TPC_Tracking_PiMi_Comp_AvgCorr.root"});
-  plotManager.AddInputDataFiles("inputTPC_Tracking_PiPl_Comp_AvgCorr", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/FirstResult/TPC_Tracking_PiPl_Comp_AvgCorr.root"});
-  plotManager.AddInputDataFiles("inputTPC_Tracking_PiMi_Comp_NoCorr", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/FirstResult/TPC_Tracking_PiMi_Comp_NoCorr.root"});
-  plotManager.AddInputDataFiles("inputTPC_Tracking_PiPl_Comp_NoCorr", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/FirstResult/TPC_Tracking_PiPl_Comp_NoCorr.root"});
-  plotManager.AddInputDataFiles("inputTPC_Tracking_PiMi_Comp_ResidualDist", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/FirstResult/TPC_Tracking_PiMi_Comp_ResidualDist.root"});
-  plotManager.AddInputDataFiles("inputTPC_Tracking_PiPl_Comp_ResidualDist", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/FirstResult/TPC_Tracking_PiPl_Comp_ResidualDist.root"});
-  plotManager.AddInputDataFiles("inputTPC_Tracking_PiMi_Comp_3DCorr", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/FirstResult/TPC_Tracking_PiMi_Comp_3DCorr.root"});
-  plotManager.AddInputDataFiles("inputTPC_Tracking_PiPl_Comp_3DCorr", {"/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/FirstResult/TPC_Tracking_PiPl_Comp_3DCorr.root"});
+  //Spline vs 3D Corr Comparison Source------------------------------------------------------------
+  plotManager.AddInputDataFiles("inputSplinevs3D", {"/home/mhemmer/Documents/ServiceTask/Trees/CorrectionCompProfilesSplines_Average.root"});  // Comparison between Spline and 3D corr.
+  plotManager.AddInputDataFiles("input3DSpline", {"/home/mhemmer/Documents/ServiceTask/Trees/CorrectionCompProfiles_Average.root"});  // Loads 3D Corr. instead of Splines, sanity check file!
   //----------------------------------------------------------------------------
 
+
   // save these settings to a file:
-  plotManager.DumpInputDataFiles("/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/Plotting/inputFiles.XML");
+  plotManager.DumpInputDataFiles("/home/mhemmer/Documents/ServiceTask/Plotting/inputFiles.XML");
   // this way you can also modify this list of input files manually in the
   // xml file and then read it into your program via
   // plotManager.LoadInputDataFiles("/media/marvin/Samsung_T5/Analyse/OmegeAnalyseConfig.XML");
 
-
-  // for the comparison of the tracking performace
-  std::vector<const char*> vTStr = {"Y", "Z", "SinPhi", "TGL", "QPt", "Sector", "NCluster", "Phi"};
-
-
   // for instance the following will give you some nice default plots:
-  vector<int16_t> goodColors = {kGray+3, kOrange+5, kViolet+5, kTeal+5, kPink+5, kAzure+5, kSpring+5};
-  vector<int16_t> goodColorsRatio = {kGray+3, kOrange+5, kViolet+5, kTeal+5, kPink+5, kAzure+5, kSpring+5};
-  vector<int16_t> goodColorsFill = {kGray+2, kOrange+6, kViolet+6, kTeal+6, kPink+6, kAzure+6, kSpring+6};
-  vector<int16_t> goodColorsFillRatio = {kGray+2, kOrange+6, kViolet+6, kTeal+6, kPink+6, kAzure+6, kSpring+6};
-  vector<int16_t> noMarker = {1, 1, 1, 1, 1, 1, 1};
-  vector<int16_t> goodMarker = {kFullCircle, kOpenCircle, kOpenSquare, kOpenDiamond, kOpenCross};
-  vector<int16_t> goodMarkerRatio = {kOpenCircle, kOpenSquare, kOpenDiamond, kOpenCross};
-
-  vector<int16_t> goodFillStyle = {3004, 3005, 3005, 3005, 3005, 3005, 3005};
+  std::vector<int16_t> goodColors = {kGray+3, kOrange+5, kViolet+5, kTeal+5, kPink+5, kAzure+5, kSpring+5};
+  std::vector<int16_t> goodColorsRatio = {kGray+3, kOrange+5, kViolet+5, kTeal+5, kPink+5, kAzure+5, kSpring+5};
+  std::vector<int16_t> goodColorsFill = {kGray+2, kOrange+6, kViolet+6, kTeal+6, kPink+6, kAzure+6, kSpring+6};
+  std::vector<int16_t> goodColorsFillRatio = {kGray+2, kOrange+6, kViolet+6, kTeal+6, kPink+6, kAzure+6, kSpring+6};
+  std::vector<int16_t> noMarker = {1, 1, 1, 1, 1, 1, 1};
+  std::vector<int16_t> goodMarker = {kFullCircle, kOpenCircle, kOpenSquare, kOpenDiamond, kOpenCross};
+  std::vector<int16_t> goodMarkerRatio = {kOpenCircle, kOpenSquare, kOpenDiamond, kOpenCross};
+  std::vector<int16_t> goodFillStyle = {3004, 3005, 3005, 3005, 3005, 3005, 3005};
 
 
   { // -----------------------------------------------------------------------
@@ -226,994 +221,115 @@ int main(int argc, char *argv[])
     plotManager.AddPlotTemplate(templatePlot);
   } // -----------------------------------------------------------------------
 
-  //Space Charge Density------------------------------------------------------
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,phi
+  // -------------------------------------------------------------------------
+  for ( int i_var = 0; i_var < Variable.size(); i_var++)
   {
-    // create the Plot object
-    Plot plot("R_Phi_A", "SpaceCharge", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("scdensity_R_Phi", "input50kHz", "r #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Z'].SetTitle(str_sc);
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,z
-  {
-    // create the Plot object
-    Plot plot("R_Z_A", "SpaceCharge", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("scdensity_R_Z", "input50kHz", "r z A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle(str_sc);
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density z,phi
-  {
-    // create the Plot object
-    Plot plot("Z_Phi_A", "SpaceCharge", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("scdensity_Z_Phi", "input50kHz", "z #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Y'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle(str_sc);
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //Distorion in Z------------------------------------------------------------
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,phi
-  {
-    // create the Plot object
-    Plot plot("R_Phi_A", "DistorionZ", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("distZ_R_Phi", "input50kHz", "r #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Z'].SetTitle("#Delta z (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,z
-  {
-    // create the Plot object
-    Plot plot("Z_Phi_A", "DistorionZ", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("distZ_Z_Phi", "input50kHz", "z #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Y'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#Delta z (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density z,phi
-  {
-    // create the Plot object
-    Plot plot("Z_R_A", "DistorionZ", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("distZ_R_Z", "input50kHz", "r z A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#Delta z (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //Distorion in R------------------------------------------------------------
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,phi
-  {
-    // create the Plot object
-    Plot plot("R_Phi_A", "DistorionR", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("distR_R_Phi", "input50kHz", "r #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Z'].SetTitle("#Delta r (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,z
-  {
-    // create the Plot object
-    Plot plot("Z_Phi_A", "DistorionR", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("distR_Z_Phi", "input50kHz", "z #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Y'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#Delta r (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density z,phi
-  {
-    // create the Plot object
-    Plot plot("Z_R_A", "DistorionR", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("distR_R_Z", "input50kHz", "r z A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#Delta r (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //Distorion in R------------------------------------------------------------
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,phi
-  {
-    // create the Plot object
-    Plot plot("R_Phi_A", "DistorionRPhi", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("distRPhi_R_Phi", "input50kHz", "r #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Z'].SetTitle("#it{#Delta r#varphi} (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,z
-  {
-    // create the Plot object
-    Plot plot("Z_Phi_A", "DistorionRPhi", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("distRPhi_Z_Phi", "input50kHz", "z #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Y'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{#Delta r#varphi} (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density z,phi
-  {
-    // create the Plot object
-    Plot plot("Z_R_A", "DistorionRPhi", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("distRPhi_R_Z", "input50kHz", "r z A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{#Delta r#varphi} (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //Space Charge Density Random Map 0-----------------------------------------
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,phi
-  {
-    // create the Plot object
-    Plot plot("R_Phi_A", "SpaceCharge", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("scdensity_R_Phi", "inputDistCorr50kHzRandomA", "r #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Z'].SetTitle(str_sc);
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,z
-  {
-    // create the Plot object
-    Plot plot("R_Z_A", "SpaceCharge", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("scdensity_R_Z", "inputDistCorr50kHzRandomA", "r z A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle(str_sc);
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density z,phi
-  {
-    // create the Plot object
-    Plot plot("Z_Phi_A", "SpaceCharge", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("scdensity_Z_Phi", "inputDistCorr50kHzRandomA", "z #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Y'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle(str_sc);
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //Distorion in Z------------------------------------------------------------
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,phi
-  {
-    // create the Plot object
-    Plot plot("R_Phi_A", "DistorionZ", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("distZ_R_Phi", "inputDistCorr50kHzRandomA", "r #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Z'].SetTitle("#Delta z (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,z
-  {
-    // create the Plot object
-    Plot plot("Z_Phi_A", "DistorionZ", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("distZ_Z_Phi", "inputDistCorr50kHzRandomA", "z #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Y'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#Delta z (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density z,phi
-  {
-    // create the Plot object
-    Plot plot("Z_R_A", "DistorionZ", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("distZ_R_Z", "inputDistCorr50kHzRandomA", "r z A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#Delta z (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //Distorion in R------------------------------------------------------------
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,phi
-  {
-    // create the Plot object
-    Plot plot("R_Phi_A", "DistorionR", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("distR_R_Phi", "inputDistCorr50kHzRandomA", "r #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Z'].SetTitle("#Delta r (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,z
-  {
-    // create the Plot object
-    Plot plot("Z_Phi_A", "DistorionR", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("distR_Z_Phi", "inputDistCorr50kHzRandomA", "z #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Y'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#Delta r (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density z,phi
-  {
-    // create the Plot object
-    Plot plot("Z_R_A", "DistorionR", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("distR_R_Z", "inputDistCorr50kHzRandomA", "r z A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#Delta r (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //Distorion in R------------------------------------------------------------
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,phi
-  {
-    // create the Plot object
-    Plot plot("R_Phi_A", "DistorionRPhi", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("distRPhi_R_Phi", "inputDistCorr50kHzRandomA", "r #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Z'].SetTitle("#it{#Delta r#varphi} (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density r,z
-  {
-    // create the Plot object
-    Plot plot("Z_Phi_A", "DistorionRPhi", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("distRPhi_Z_Phi", "inputDistCorr50kHzRandomA", "z #varphi A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['X'].SetRange(0.0, 2.*M_PI).SetTitle(str_phiaxis);
-    plot[1]['Y'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{#Delta r#varphi} (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  // A-Side SP density z,phi
-  {
-    // create the Plot object
-    Plot plot("Z_R_A", "DistorionRPhi", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz_Random");
-    plot[1].AddData("distRPhi_R_Z", "inputDistCorr50kHzRandomA", "r z A-Side").SetContours(255).SetOptions(colz);
-    plot[1]['Y'].SetRange(82.5, 254.5).SetTitle(str_raxis);
-    plot[1]['X'].SetRange(0., 249.525).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{#Delta r#varphi} (cm)");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-
-  //--------------------------------------------------------------------------
-  //-----------------------Correction ComparisonRandom------------------------
-  //--------------------------------------------------------------------------
-  std::vector<int> vz = {0, 10, 50, 100, 150, 250};
-
-  for (int iz = 0; iz < vz.size()-1; iz++)
-  {
-    //--------------------------------------------------------------------------
-    //------------------------------------dr------------------------------------
-    //--------------------------------------------------------------------------
-
-    // dr (phi)
-    //--------------------------------------------------------------------------
+    for (int i_axis = 0; i_axis < Axis.size(); i_axis++)
     {
-      // create the Plot object
-      Plot plot(Form("dr_phi_z_%i_%i", vz.at(iz), vz.at(iz+1) ), "ComparisonRandom", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("dr_phi_z_%i_%i", vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_dr_phi_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-      plot[1]['X'].SetRange(-M_PI, +M_PI).SetTitle(str_phiaxis);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // dr (sector)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("dr_sector_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonRandom", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("dr_sector_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_dr_sector_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-      plot[1]['X'].SetRange(0, 18).SetTitle(str_sector);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // dr (r)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("dr_r_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonRandom", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("dr_r_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_dr_r_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-      plot[1]['X'].SetRange(83, 246).SetTitle(str_raxis);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // dr (row)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("dr_row_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonRandom", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("dr_row_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_dr_row_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-      plot[1]['X'].SetRange(0, 152).SetTitle(str_row);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    //--------------------------------------------------------------------------
-    //----------------------------------drphi-----------------------------------
-    //--------------------------------------------------------------------------
-
-    // drphi (phi)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("drphi_phi_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonRandom", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("drphi_phi_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_drphi_phi_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-      plot[1]['X'].SetRange(-M_PI, +M_PI).SetTitle(str_phiaxis);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // drphi (sector)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("drphi_sector_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonRandom", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("drphi_sector_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_drphi_sector_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-      plot[1]['X'].SetRange(0, 18).SetTitle(str_sector);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // drphi (r)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("drphi_r_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonRandom", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("drphi_r_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_drphi_r_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-      plot[1]['X'].SetRange(83, 246).SetTitle(str_raxis);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // drphi (row)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("drphi_row_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonRandom", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("drphi_row_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_drphi_row_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-      plot[1]['X'].SetRange(0, 152).SetTitle(str_row);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    //--------------------------------------------------------------------------
-    //------------------------------------dr------------------------------------
-    //--------------------------------------------------------------------------
-
-    // dr (phi)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("dr_phi_z_%i_%i", vz.at(iz), vz.at(iz+1) ), "ComparisonAverage", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("dr_phi_z_%i_%i", vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_dr_phi_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-      plot[1]['X'].SetRange(-M_PI, +M_PI).SetTitle(str_phiaxis);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // dr (sector)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("dr_sector_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonAverage", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("dr_sector_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_dr_sector_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-      plot[1]['X'].SetRange(0, 18).SetTitle(str_sector);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // dr (r)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("dr_r_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonAverage", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("dr_r_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_dr_r_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-      plot[1]['X'].SetRange(83, 246).SetTitle(str_raxis);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // dr (row)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("dr_row_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonAverage", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("dr_row_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_dr_row_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-      plot[1]['X'].SetRange(0, 152).SetTitle(str_row);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    //--------------------------------------------------------------------------
-    //----------------------------------drphi-----------------------------------
-    //--------------------------------------------------------------------------
-
-    // drphi (phi)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("drphi_phi_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonAverage", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("drphi_phi_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_drphi_phi_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-      plot[1]['X'].SetRange(-M_PI, +M_PI).SetTitle(str_phiaxis);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // drphi (sector)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("drphi_sector_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonAverage", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("drphi_sector_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_drphi_sector_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-      plot[1]['X'].SetRange(0, 18).SetTitle(str_sector);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // drphi (r)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("drphi_r_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonAverage", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("drphi_r_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_drphi_r_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-      plot[1]['X'].SetRange(83, 246).SetTitle(str_raxis);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-
-    // drphi (row)
-    //--------------------------------------------------------------------------
-    {
-      // create the Plot object
-      Plot plot(Form("drphi_row_z_%i_%i", vz.at(iz), vz.at(iz+1)), "ComparisonAverage", "2d_squarelike");
-      // optionally you can also define figure categories (and subcategories) within a figure group
-      plot.SetFigureCategory("50kHz");
-      plot[1].AddData(Form("drphi_row_z_%i_%i",vz.at(iz), vz.at(iz+1) ), "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-      plot[1].AddData(Form("mean_drphi_row_z_%i_%i",vz.at(iz), vz.at(iz+1)), "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-      plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-      plot[1]['X'].SetRange(0, 152).SetTitle(str_row);
-      plot[1]['Z'].SetTitle("#it{count}");
-      plot[1].AddText(0.41, 0.194, Form("%i<#it{z}<%i", vz.at(iz), vz.at(iz+1) ) );
-      plotManager.AddPlot(plot);
-    }
-    //--------------------------------------------------------------------------
-  }
-
-  // dr (z) A-side
-  //--------------------------------------------------------------------------
-  {
-    // create the Plot object
-    Plot plot("dr_z_A", "ComparisonRandom", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("dr_z_A", "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-    plot[1].AddData("mean_dr_z_A", "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-    plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-    plot[1]['X'].SetRange(0., 245).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{count}");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  // drphi (z) A-side
-  //--------------------------------------------------------------------------
-  {
-    // create the Plot object
-    Plot plot("drphi_z_A", "ComparisonRandom", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("drphi_z_A", "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-    plot[1].AddData("mean_drphi_z_A", "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-    plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-    plot[1]['X'].SetRange(0., 245).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{count}");
-
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  // dr (z) C-side
-  //--------------------------------------------------------------------------
-  {
-    // create the Plot object
-    Plot plot("dr_z_C", "ComparisonRandom", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("dr_z_C", "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-    plot[1].AddData("mean_dr_z_C", "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-    plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-    plot[1]['X'].SetRange(-245., 0).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{count}");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  // drphi (z)C--side
-  //--------------------------------------------------------------------------
-  {
-    // create the Plot object
-    Plot plot("drphi_z_C", "ComparisonRandom", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("drphi_z_C", "inputCorrectionComp50kHzRandom", "").SetContours(255).SetOptions(colz);
-    plot[1].AddData("mean_drphi_z_C", "inputCorrectionComp50kHzRandom", "").SetColor(kOrange+5);
-    plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-    plot[1]['X'].SetRange(-245., 0).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{count}");
-
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  //--------------------------------------------------------------------------
-  //-AVERAGE-
-  //--------------------------------------------------------------------------
-  // dr (z) A-side
-  //--------------------------------------------------------------------------
-  {
-    // create the Plot object
-    Plot plot("dr_z_A", "ComparisonAverage", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("dr_z_A", "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-    plot[1].AddData("mean_dr_z_A", "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-    plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-    plot[1]['X'].SetRange(0., 245).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{count}");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  // drphi (z) A-side
-  //--------------------------------------------------------------------------
-  {
-    // create the Plot object
-    Plot plot("drphi_z_A", "ComparisonAverage", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("drphi_z_A", "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-    plot[1].AddData("mean_drphi_z_A", "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-    plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-    plot[1]['X'].SetRange(0., 245).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{count}");
-
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  // dr (z) C-side
-  //--------------------------------------------------------------------------
-  {
-    // create the Plot object
-    Plot plot("dr_z_C", "ComparisonAverage", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("dr_z_C", "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-    plot[1].AddData("mean_dr_z_C", "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-    plot[1]['Y'].SetRange(-250, 250).SetTitle(str_draxis);
-    plot[1]['X'].SetRange(-245., 0).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{count}");
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-
-  // drphi (z)C--side
-  //--------------------------------------------------------------------------
-  {
-    // create the Plot object
-    Plot plot("drphi_z_C", "ComparisonAverage", "2d_squarelike");
-    // optionally you can also define figure categories (and subcategories) within a figure group
-    plot.SetFigureCategory("50kHz");
-    plot[1].AddData("drphi_z_C", "inputCorrectionComp50kHzAverage", "").SetContours(255).SetOptions(colz);
-    plot[1].AddData("mean_drphi_z_C", "inputCorrectionComp50kHzAverage", "").SetColor(kOrange+5);
-    plot[1]['Y'].SetRange(-200, 200).SetTitle(str_drphiaxis);
-    plot[1]['X'].SetRange(-245., 0).SetTitle(str_zaxis);
-    plot[1]['Z'].SetTitle("#it{count}");
-
-    plotManager.AddPlot(plot);
-  }
-  //--------------------------------------------------------------------------
-  for (int iFile = 0; iFile < vOutFileName.size(); iFile++) {
-    for (int iCut = 0; iCut < vCuts.size(); iCut++) {
-      for (int iTrackVar = 0; iTrackVar <= 5; iTrackVar++) {
-        TString str_plot_2d_QPt = Form( "Diff%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(5), vCutName_2.at(iCut) );
-        TString str_plot_mean_QPt = Form( "MeanDiff%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(5), vCutName_2.at(iCut) );
-        TString str_plot_sigma_QPt = Form( "DiffSigma%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(5), vCutName_2.at(iCut) );
-        TString str_plot_2d_Sector = Form( "Diff%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(6), vCutName_2.at(iCut) );
-        TString str_plot_mean_Sector = Form( "MeanDiff%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(6), vCutName_2.at(iCut) );
-        TString str_plot_sigma_Sector = Form( "DiffSigma%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(6), vCutName_2.at(iCut) );
-        TString str_plot_2d_NCluster = Form( "Diff%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(7), vCutName_2.at(iCut) );
-        TString str_plot_mean_NCluster = Form( "MeanDiff%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(7), vCutName_2.at(iCut) );
-        TString str_plot_sigma_NCluster = Form( "DiffSigma%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(7), vCutName_2.at(iCut) );
-        TString str_plot_2d_Phi = Form( "Diff%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(8), vCutName_2.at(iCut) );
-        TString str_plot_mean_Phi = Form( "MeanDiff%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(8), vCutName_2.at(iCut) );
-        TString str_plot_sigma_Phi = Form( "DiffSigma%s_%s_%s", vTStr_2.at(iTrackVar), vTStr_2.at(8), vCutName_2.at(iCut) );
-        
-        //--------------------------------------------------------------------------
+      for (int i = 0; i < vz.size()-1; i++)
+      {
+        for(int i_input = 0; i_input < vInput.size(); i_input++)
         {
-          // create the Plot object
-          Plot plot(str_plot_2d_QPt.Data(), "ComparisonTracking", "2d_squarelike");
-          // optionally you can also define figure categories (and subcategories) within a figure group
-          plot.SetFigureCategory(vCategory.at(iFile));
-          plot[1].AddData(str_plot_2d_QPt.Data(), vOutFileName.at(iFile), "").SetContours(255).SetOptions(colz);
-          plot[1].AddData(str_plot_mean_QPt.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[1]['Y'].SetTitle(vStr_Axis.at(iTrackVar));
-          plot[1]['X'].SetTitle(str_qpt).SetRange(-1.5, 0.5);
-          plot[1]['Z'].SetTitle("#it{count}").SetLog();
-          plot[1].AddText(0.2, 0.9, Form("%s // %s", vLatexText.at(iFile), vCutName_2.at(iCut) ) ) ;
-          plotManager.AddPlot(plot);
-        }
-        //--------------------------------------------------------------------------
-        {
-          // create the Plot object
-          Plot plot(str_plot_2d_QPt.Data(), "ComparisonTracking", "2d_ALICE_Ratio");
-          // optionally you can also define figure categories (and subcategories) within a figure group
-          plot.SetFigureCategory(vCategory.at(iFile) + "/Sigma");
-          plot[1].AddData(str_plot_2d_QPt.Data(), vOutFileName.at(iFile), "").SetContours(255).SetOptions(colz);
-          plot[1].AddData(str_plot_mean_QPt.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[2].AddData(str_plot_sigma_QPt.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[1]['Y'].SetTitle(vStr_Axis.at(iTrackVar));
-          if(iTrackVar == 0)
+          // TString for z slice cut
+          TString z_cut = Form("gz<%i&&gz>%i&&" + Cut.at(0), vz.at(i+1), vz.at(i) );
+
+          // TStrings for plotting (histo name and tree->Draw("THIS"))
+          // 3D correction - Splines
+          TString str_histo_CT = Form( TString(Variable.at(i_var) + "_" + AxisText.at(i_axis) + "_z_%i_%i_CT"),vz.at(i), vz.at(i+1) );
+          TString str_mean_CT = Form( TString("mean_" + Variable.at(i_var) + "_" + AxisText.at(i_axis) + "_z_%i_%i_CT"),vz.at(i), vz.at(i+1) );
+
+          // 3D correction + 3D distortion at corrected points
+          TString str_histo_CCD = Form( TString(Variable.at(i_var) + "_" + AxisText.at(i_axis) + "_z_%i_%i_CCD"),vz.at(i), vz.at(i+1) );
+          TString str_mean_CCD = Form( TString("mean_" + Variable.at(i_var) + "_" + AxisText.at(i_axis) + "_z_%i_%i_CCD"),vz.at(i), vz.at(i+1) );
+
+          // 3D correction at distorted points + 3D distortion
+          TString str_histo_DCD = Form( TString(Variable.at(i_var) + "_" + AxisText.at(i_axis) + "_z_%i_%i_DCD"),vz.at(i), vz.at(i+1) );
+          TString str_mean_DCD = Form( TString("mean_" + Variable.at(i_var) + "_" + AxisText.at(i_axis) + "_z_%i_%i_DCD"),vz.at(i), vz.at(i+1) );
+          if(i_axis < 4)
           {
-            plot[1].AddData("f1", vOutFileName.at(iFile), "").SetColor(kBlack);
-            plot[1].AddData("f2", vOutFileName.at(iFile), "").SetColor(kBlack);
-            plot[1]['Y'].SetRange(-0.5,0.5);
+            // CT
+            //-----------------------------------------------------------------
+            {
+              Plot plot(str_histo_CT.Data(), "Spline_vs_3DCorr", "2d_squarelike");
+              plot.SetFigureCategory(vStructure.at(i_input));
+              plot[1].AddData(str_histo_CT.Data(), vInput.at(i_input), "").SetContours(255).SetOptions(colz);
+              plot[1].AddData(str_mean_CT.Data(), vInput.at(i_input), "").SetColor(kTeal+5);
+              plot[1]['X'].SetTitle(AxisText_2.at(i_axis));
+              plot[1]['Y'].SetTitle(Var_CT);
+              plot[1]['Z'].SetTitle("#it{counts}");
+              plotManager.AddPlot(plot);
+            }
+            // CCD
+            //-----------------------------------------------------------------
+            {
+              Plot plot(str_histo_CCD.Data(), "Spline_vs_3DCorr", "2d_squarelike");
+              plot.SetFigureCategory(vStructure.at(i_input));
+              plot[1].AddData(str_histo_CCD.Data(), vInput.at(i_input), "").SetContours(255).SetOptions(colz);
+              plot[1].AddData(str_mean_CCD.Data(), vInput.at(i_input), "").SetColor(kTeal+5);
+              plot[1]['X'].SetTitle(AxisText_2.at(i_axis));
+              plot[1]['Y'].SetTitle(Var_CCD);
+              plot[1]['Z'].SetTitle("#it{counts}");
+              plotManager.AddPlot(plot);
+            }
+            // DCD
+            //-----------------------------------------------------------------
+            {
+              Plot plot(str_histo_DCD.Data(), "Spline_vs_3DCorr", "2d_squarelike");
+              plot.SetFigureCategory(vStructure.at(i_input));
+              plot[1].AddData(str_histo_DCD.Data(), vInput.at(i_input), "").SetContours(255).SetOptions(colz);
+              plot[1].AddData(str_mean_DCD.Data(), vInput.at(i_input), "").SetColor(kTeal+5);
+              plot[1]['X'].SetTitle(AxisText_2.at(i_axis));
+              plot[1]['Y'].SetTitle(Var_DCD);
+              plot[1]['Z'].SetTitle("#it{counts}");
+              plotManager.AddPlot(plot);
+            }
           }
-          plot[1]['Z'].SetTitle("#it{count}").SetLog();
-          plot[2]['Y'].SetTitle("#sigma");
-          plot[2]['X'].SetTitle(str_qpt).SetRange(-1.5, 0.5);
-          plot[1].AddText(0.2, 0.9, Form("%s // %s", vLatexText.at(iFile), vCutName_2.at(iCut) ) ) ;
-          plotManager.AddPlot(plot);
-        }
-        //--------------------------------------------------------------------------
-        {
-          // create the Plot object
-          Plot plot(str_plot_2d_Sector.Data(), "ComparisonTracking", "2d_squarelike");
-          // optionally you can also define figure categories (and subcategories) within a figure group
-          plot.SetFigureCategory(vCategory.at(iFile));
-          plot[1].AddData(str_plot_2d_Sector.Data(), vOutFileName.at(iFile), "").SetContours(255).SetOptions(colz);
-          plot[1].AddData(str_plot_mean_Sector.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[1]['Y'].SetTitle(vStr_Axis.at(iTrackVar));
-          plot[1]['X'].SetTitle(str_sector);
-          plot[1]['Z'].SetTitle("#it{count}").SetLog();
-          plot[1].AddText(0.2, 0.9, Form("%s // %s", vLatexText.at(iFile), vCutName_2.at(iCut) ) ) ;
-          plotManager.AddPlot(plot);
-        }
-        //--------------------------------------------------------------------------
-        {
-          // create the Plot object
-          Plot plot(str_plot_2d_Sector.Data(), "ComparisonTracking", "2d_ALICE_Ratio");
-          // optionally you can also define figure categories (and subcategories) within a figure group
-          plot.SetFigureCategory(vCategory.at(iFile) + "/Sigma");
-          plot[1].AddData(str_plot_2d_Sector.Data(), vOutFileName.at(iFile), "").SetContours(255).SetOptions(colz);
-          plot[1].AddData(str_plot_mean_Sector.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[2].AddData(str_plot_sigma_Sector.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[1]['Y'].SetTitle(vStr_Axis.at(iTrackVar));
-          if(iTrackVar == 0)
+          else
           {
-            plot[1].AddData("f1", "inputTPC_Tracking_PiMi_Comp_NoCorr", "").SetColor(kBlack);
-            plot[1].AddData("f2", "inputTPC_Tracking_PiMi_Comp_NoCorr", "").SetColor(kBlack);
-            plot[1]['Y'].SetRange(-0.5,0.5);
+            // CT
+            //-----------------------------------------------------------------
+            {
+              Plot plot(str_histo_CT.Data(), "Spline_vs_3DCorr", "2d_squarelike");
+              plot.SetFigureCategory(vStructure.at(i_input));
+              plot[1].AddData(str_mean_CT.Data(), vInput.at(i_input), "").SetContours(255).SetOptions(colz);
+              plot[1]['X'].SetTitle(v2Daxis.at(i_axis - 4).at(0) );
+              plot[1]['Y'].SetTitle(v2Daxis.at(i_axis - 4).at(1) );
+              plot[1]['Z'].SetTitle(Var_CT);
+              plotManager.AddPlot(plot);
+            }
+            // CCD
+            //-----------------------------------------------------------------
+            {
+              Plot plot(str_histo_CCD.Data(), "Spline_vs_3DCorr", "2d_squarelike");
+              plot.SetFigureCategory(vStructure.at(i_input));
+              plot[1].AddData(str_mean_CCD.Data(), vInput.at(i_input), "").SetContours(255).SetOptions(colz);
+              plot[1]['X'].SetTitle(v2Daxis.at(i_axis - 4).at(0) );
+              plot[1]['Y'].SetTitle(v2Daxis.at(i_axis - 4).at(1) );
+              plot[1]['Z'].SetTitle(Var_CCD).SetRange(-18,23);
+              plotManager.AddPlot(plot);
+            }
+            // DCD
+            //-----------------------------------------------------------------
+            {
+              Plot plot(str_histo_DCD.Data(), "Spline_vs_3DCorr", "2d_squarelike");
+              plot.SetFigureCategory(vStructure.at(i_input));
+              plot[1].AddData(str_mean_DCD.Data(), vInput.at(i_input), "").SetContours(255).SetOptions(colz);
+              plot[1]['X'].SetTitle(v2Daxis.at(i_axis - 4).at(0) );
+              plot[1]['Y'].SetTitle(v2Daxis.at(i_axis - 4).at(1) );
+              plot[1]['Z'].SetTitle(Var_DCD).SetRange(-18,23);
+              plotManager.AddPlot(plot);
+            }
           }
-          plot[1]['Z'].SetTitle("#it{count}").SetLog();
-          plot[2]['Y'].SetTitle("#sigma");
-          plot[2]['X'].SetTitle(str_sector);
-          plot[1].AddText(0.2, 0.9, Form("%s // %s", vLatexText.at(iFile), vCutName_2.at(iCut) ) ) ;
-          plotManager.AddPlot(plot);
         }
-        //--------------------------------------------------------------------------
-        {
-          // create the Plot object
-          Plot plot(str_plot_2d_NCluster.Data(), "ComparisonTracking", "2d_squarelike");
-          // optionally you can also define figure categories (and subcategories) within a figure group
-          plot.SetFigureCategory(vCategory.at(iFile));
-          plot[1].AddData(str_plot_2d_NCluster.Data(), vOutFileName.at(iFile), "").SetContours(255).SetOptions(colz);
-          plot[1].AddData(str_plot_mean_NCluster.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[1]['Y'].SetTitle(vStr_Axis.at(iTrackVar));
-          plot[1]['X'].SetTitle(str_NCluster);
-          plot[1]['Z'].SetTitle("#it{count}").SetLog();
-          plot[1].AddText(0.2, 0.9, Form("%s // %s", vLatexText.at(iFile), vCutName_2.at(iCut) ) ) ;
-          plotManager.AddPlot(plot);
-        }
-        //--------------------------------------------------------------------------
-        {
-          // create the Plot object
-          Plot plot(str_plot_2d_NCluster.Data(), "ComparisonTracking", "2d_ALICE_Ratio");
-          // optionally you can also define figure categories (and subcategories) within a figure group
-          plot.SetFigureCategory(vCategory.at(iFile) + "/Sigma");
-          plot[1].AddData(str_plot_2d_NCluster.Data(), vOutFileName.at(iFile), "").SetContours(255).SetOptions(colz);
-          plot[1].AddData(str_plot_mean_NCluster.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[2].AddData(str_plot_sigma_NCluster.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[1]['Y'].SetTitle(vStr_Axis.at(iTrackVar));
-          if(iTrackVar == 0)
-          {
-            plot[1].AddData("f1", vOutFileName.at(iFile), "").SetColor(kBlack);
-            plot[1].AddData("f2", vOutFileName.at(iFile), "").SetColor(kBlack);
-            plot[1]['Y'].SetRange(-0.5,0.5);
-          }
-          plot[1]['Z'].SetTitle("#it{count}").SetLog();
-          plot[2]['Y'].SetTitle("#sigma");
-          plot[2]['X'].SetTitle(str_NCluster);
-          plot[1].AddText(0.2, 0.9, Form("%s // %s", vLatexText.at(iFile), vCutName_2.at(iCut) ) ) ;
-          plotManager.AddPlot(plot);
-        }
-        //--------------------------------------------------------------------------
-        {
-          // create the Plot object
-          Plot plot(str_plot_2d_Phi.Data(), "ComparisonTracking", "2d_squarelike");
-          // optionally you can also define figure categories (and subcategories) within a figure group
-          plot.SetFigureCategory(vCategory.at(iFile));
-          plot[1].AddData(str_plot_2d_Phi.Data(), vOutFileName.at(iFile), "").SetContours(255).SetOptions(colz);
-          plot[1].AddData(str_plot_mean_Phi.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[1]['Y'].SetTitle(vStr_Axis.at(iTrackVar));
-          plot[1]['X'].SetTitle(str_phi);
-          plot[1]['Z'].SetTitle("#it{count}").SetLog();
-          plot[1].AddText(0.2, 0.9, Form("%s // %s", vLatexText.at(iFile), vCutName_2.at(iCut) ) ) ;
-          plotManager.AddPlot(plot);
-        }
-        //--------------------------------------------------------------------------
-        {
-          // create the Plot object
-          Plot plot(str_plot_2d_Phi.Data(), "ComparisonTracking", "2d_candle");
-          // optionally you can also define figure categories (and subcategories) within a figure group
-          plot.SetFigureCategory(vCategory.at(iFile)+ "/Candle");
-          plot[1].AddData(str_plot_2d_Phi.Data(), vOutFileName.at(iFile), "").SetOptions(candle7);
-          if(iTrackVar == 0)
-          {
-            plot[1].AddData("f1", vOutFileName.at(iFile), "").SetColor(kBlack);
-            plot[1].AddData("f2", vOutFileName.at(iFile), "").SetColor(kBlack);
-            plot[1]['Y'].SetRange(-0.5,0.5);
-          }
-          plot[1]['Y'].SetTitle(vStr_Axis.at(iTrackVar));
-          plot[1]['X'].SetTitle(str_phi);
-          plot[1]['Z'].SetTitle("#it{count}").SetLog();
-          plot[1].AddText(0.2, 0.9, Form("%s // %s", vLatexText.at(iFile), vCutName_2.at(iCut) ) ) ;
-          plotManager.AddPlot(plot);
-        }
-        //--------------------------------------------------------------------------
-        {
-          // create the Plot object
-          Plot plot(str_plot_2d_Phi.Data(), "ComparisonTracking", "2d_ALICE_Ratio");
-          // optionally you can also define figure categories (and subcategories) within a figure group
-          plot.SetFigureCategory(vCategory.at(iFile) + "/Sigma");
-          plot[1].AddData(str_plot_2d_Phi.Data(), vOutFileName.at(iFile), "").SetContours(255).SetOptions(colz);
-          plot[1].AddData(str_plot_mean_Phi.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[2].AddData(str_plot_sigma_Phi.Data(), vOutFileName.at(iFile), "").SetColor(kOrange+5);
-          plot[1]['Y'].SetTitle(vStr_Axis.at(iTrackVar));
-          if(iTrackVar == 0)
-          {
-            plot[1].AddData("f1", vOutFileName.at(iFile), "").SetColor(kBlack);
-            plot[1].AddData("f2", vOutFileName.at(iFile), "").SetColor(kBlack);
-            plot[1]['Y'].SetRange(-0.5,0.5);
-          }
-          plot[1]['Z'].SetTitle("#it{count}").SetLog();
-          plot[2]['Y'].SetTitle("#sigma");
-          plot[2]['X'].SetTitle(str_phi);
-          plot[1].AddText(0.2, 0.9, Form("%s // %s", vLatexText.at(iFile), vCutName_2.at(iCut) ) ) ;
-          plotManager.AddPlot(plot);
-        }
-      }
-    }
-  }
-  // End of cut loop
-  //----------------------------------------------------------------------------
+      } // end of loop over z
+    } // end of loop over different axis
+  } // end of loop over different variables
+  //---------------------------------------------------------------------------
   // to save the plots to disk as pdf you first have to tell the manager where to put them
-  plotManager.SetOutputDirectory("/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/Plotting/Pictures");
+  plotManager.SetOutputDirectory("/home/mhemmer/Documents/ServiceTask/Pictures");
   // the manager will automatically create subfolders for the figure groups and categories
   // to generate all stored plots as pdf you can call
-  plotManager.DumpPlots("/media/mhemmer/Samsung_T5/Arbeiten/ServiceTask/Plotting/plotDefinitions.XML");
+  plotManager.DumpPlots("/home/mhemmer/Documents/ServiceTask/Plotting/plotDefinitions.XML");
   // plotManager.CreatePlots("", "", { }, "pdf");
 
   return 0;
