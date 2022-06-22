@@ -1,0 +1,3 @@
+/home/mhemmer/Documents/ServiceTask/Plotting/build/CMakeFiles/rebuild_cache.dir
+/home/mhemmer/Documents/ServiceTask/Plotting/build/CMakeFiles/edit_cache.dir
+/home/mhemmer/Documents/ServiceTask/Plotting/build/CMakeFiles/create.dir
