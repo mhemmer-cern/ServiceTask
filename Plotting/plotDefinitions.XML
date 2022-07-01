@@ -19,10 +19,10 @@
 			<text_size>24</text_size>
 			<default_marker_size>0</default_marker_size>
 			<default_marker_styles>1,1,1,1,1,1,1</default_marker_styles>
-			<default_marker_colors>923,805,885,845,905,865,825</default_marker_colors>
+			<default_marker_colors>923,805,885,905,905,865,825</default_marker_colors>
 			<default_line_width>3</default_line_width>
 			<default_line_styles>1</default_line_styles>
-			<default_line_colors>923,805,885,845,905,865,825</default_line_colors>
+			<default_line_colors>923,805,885,905,905,865,825</default_line_colors>
 			<default_fill_styles>0</default_fill_styles>
 			<default_fill_colors>922,806,886,846,906,866,826</default_fill_colors>
 			<AXIS_X>
@@ -64,7 +64,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_phi_z_0_10_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -72,12 +72,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_phi_z_0_10_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -101,7 +101,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_phi_z_0_10_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -109,12 +109,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_phi_z_0_10_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -138,7 +138,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_phi_z_0_10_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -146,12 +146,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_phi_z_0_10_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -175,7 +175,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_phi_z_0_10_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -183,12 +183,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_phi_z_0_10_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -212,7 +212,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_phi_z_0_10_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -220,12 +220,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_phi_z_0_10_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -249,7 +249,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_phi_z_0_10_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -257,12 +257,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_phi_z_0_10_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -286,7 +286,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_phi_z_10_50_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -294,12 +294,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_phi_z_10_50_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -323,7 +323,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_phi_z_10_50_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -331,12 +331,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_phi_z_10_50_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -360,7 +360,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_phi_z_10_50_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -368,12 +368,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_phi_z_10_50_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -397,7 +397,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_phi_z_10_50_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -405,12 +405,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_phi_z_10_50_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -434,7 +434,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_phi_z_10_50_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -442,12 +442,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_phi_z_10_50_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -471,7 +471,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_phi_z_10_50_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -479,12 +479,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_phi_z_10_50_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -508,7 +508,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_phi_z_50_100_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -516,12 +516,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_phi_z_50_100_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -545,7 +545,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_phi_z_50_100_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -553,12 +553,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_phi_z_50_100_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -582,7 +582,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_phi_z_50_100_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -590,12 +590,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_phi_z_50_100_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -619,7 +619,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_phi_z_50_100_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -627,12 +627,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_phi_z_50_100_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -656,7 +656,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_phi_z_50_100_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -664,12 +664,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_phi_z_50_100_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -693,7 +693,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_phi_z_50_100_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -701,12 +701,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_phi_z_50_100_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -730,7 +730,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_phi_z_100_150_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -738,12 +738,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_phi_z_100_150_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -767,7 +767,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_phi_z_100_150_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -775,12 +775,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_phi_z_100_150_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -804,7 +804,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_phi_z_100_150_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -812,12 +812,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_phi_z_100_150_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -841,7 +841,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_phi_z_100_150_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -849,12 +849,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_phi_z_100_150_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -878,7 +878,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_phi_z_100_150_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -886,12 +886,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_phi_z_100_150_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -915,7 +915,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_phi_z_100_150_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -923,12 +923,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_phi_z_100_150_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -952,7 +952,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_phi_z_150_250_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -960,12 +960,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_phi_z_150_250_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -989,7 +989,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_phi_z_150_250_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -997,12 +997,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_phi_z_150_250_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1026,7 +1026,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_phi_z_150_250_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1034,12 +1034,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_phi_z_150_250_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1063,7 +1063,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_phi_z_150_250_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1071,12 +1071,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_phi_z_150_250_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1100,7 +1100,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_phi_z_150_250_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1108,12 +1108,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_phi_z_150_250_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1137,7 +1137,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_phi_z_150_250_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1145,12 +1145,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_phi_z_150_250_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1174,7 +1174,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_row_z_0_10_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1182,12 +1182,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_row_z_0_10_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1211,7 +1211,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_row_z_0_10_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1219,12 +1219,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_row_z_0_10_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1248,7 +1248,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_row_z_0_10_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1256,12 +1256,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_row_z_0_10_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1285,7 +1285,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_row_z_0_10_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1293,12 +1293,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_row_z_0_10_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1322,7 +1322,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_row_z_0_10_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1330,12 +1330,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_row_z_0_10_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1359,7 +1359,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_row_z_0_10_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1367,12 +1367,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_row_z_0_10_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1396,7 +1396,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_row_z_10_50_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1404,12 +1404,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_row_z_10_50_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1433,7 +1433,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_row_z_10_50_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1441,12 +1441,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_row_z_10_50_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1470,7 +1470,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_row_z_10_50_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1478,12 +1478,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_row_z_10_50_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1507,7 +1507,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_row_z_10_50_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1515,12 +1515,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_row_z_10_50_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1544,7 +1544,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_row_z_10_50_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1552,12 +1552,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_row_z_10_50_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1581,7 +1581,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_row_z_10_50_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1589,12 +1589,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_row_z_10_50_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1618,7 +1618,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_row_z_50_100_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1626,12 +1626,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_row_z_50_100_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1655,7 +1655,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_row_z_50_100_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1663,12 +1663,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_row_z_50_100_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1692,7 +1692,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_row_z_50_100_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1700,12 +1700,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_row_z_50_100_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1729,7 +1729,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_row_z_50_100_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1737,12 +1737,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_row_z_50_100_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1766,7 +1766,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_row_z_50_100_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1774,12 +1774,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_row_z_50_100_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1803,7 +1803,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_row_z_50_100_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1811,12 +1811,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_row_z_50_100_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1840,7 +1840,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_row_z_100_150_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1848,12 +1848,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_row_z_100_150_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1877,7 +1877,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_row_z_100_150_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1885,12 +1885,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_row_z_100_150_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1914,7 +1914,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_row_z_100_150_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1922,12 +1922,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_row_z_100_150_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1951,7 +1951,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_row_z_100_150_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1959,12 +1959,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_row_z_100_150_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -1988,7 +1988,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_row_z_100_150_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -1996,12 +1996,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_row_z_100_150_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2025,7 +2025,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_row_z_100_150_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2033,12 +2033,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_row_z_100_150_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2062,7 +2062,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_row_z_150_250_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2070,12 +2070,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_row_z_150_250_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2099,7 +2099,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_row_z_150_250_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2107,12 +2107,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_row_z_150_250_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2136,7 +2136,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_row_z_150_250_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2144,12 +2144,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_row_z_150_250_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2173,7 +2173,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_row_z_150_250_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2181,12 +2181,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_row_z_150_250_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2210,7 +2210,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_row_z_150_250_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2218,12 +2218,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_row_z_150_250_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2247,7 +2247,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_row_z_150_250_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2255,12 +2255,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_row_z_150_250_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2284,7 +2284,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_r_z_0_10_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2292,12 +2292,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_r_z_0_10_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2321,7 +2321,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_r_z_0_10_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2329,12 +2329,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_r_z_0_10_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2358,7 +2358,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_r_z_0_10_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2366,12 +2366,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_r_z_0_10_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2395,7 +2395,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_r_z_0_10_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2403,12 +2403,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_r_z_0_10_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2432,7 +2432,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_r_z_0_10_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2440,12 +2440,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_r_z_0_10_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2469,7 +2469,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_r_z_0_10_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2477,12 +2477,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_r_z_0_10_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2506,7 +2506,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_r_z_10_50_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2514,12 +2514,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_r_z_10_50_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2543,7 +2543,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_r_z_10_50_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2551,12 +2551,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_r_z_10_50_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2580,7 +2580,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_r_z_10_50_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2588,12 +2588,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_r_z_10_50_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2617,7 +2617,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_r_z_10_50_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2625,12 +2625,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_r_z_10_50_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2654,7 +2654,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_r_z_10_50_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2662,12 +2662,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_r_z_10_50_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2691,7 +2691,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_r_z_10_50_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2699,12 +2699,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_r_z_10_50_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2728,7 +2728,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_r_z_50_100_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2736,12 +2736,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_r_z_50_100_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2765,7 +2765,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_r_z_50_100_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2773,12 +2773,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_r_z_50_100_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2802,7 +2802,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_r_z_50_100_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2810,12 +2810,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_r_z_50_100_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2839,7 +2839,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_r_z_50_100_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2847,12 +2847,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_r_z_50_100_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2876,7 +2876,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_r_z_50_100_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2884,12 +2884,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_r_z_50_100_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2913,7 +2913,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_r_z_50_100_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2921,12 +2921,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_r_z_50_100_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2950,7 +2950,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_r_z_100_150_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2958,12 +2958,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_r_z_100_150_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -2987,7 +2987,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_r_z_100_150_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -2995,12 +2995,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_r_z_100_150_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3024,7 +3024,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_r_z_100_150_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3032,12 +3032,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_r_z_100_150_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3061,7 +3061,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_r_z_100_150_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3069,12 +3069,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_r_z_100_150_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3098,7 +3098,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_r_z_100_150_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3106,12 +3106,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_r_z_100_150_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3135,7 +3135,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_r_z_100_150_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3143,12 +3143,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_r_z_100_150_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3172,7 +3172,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_r_z_150_250_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3180,12 +3180,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_r_z_150_250_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3209,7 +3209,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_r_z_150_250_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3217,12 +3217,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_r_z_150_250_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3246,7 +3246,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_r_z_150_250_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3254,12 +3254,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_r_z_150_250_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3283,7 +3283,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_r_z_150_250_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3291,12 +3291,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_r_z_150_250_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3320,7 +3320,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_r_z_150_250_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3328,12 +3328,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_r_z_150_250_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3357,7 +3357,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_r_z_150_250_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3365,12 +3365,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_r_z_150_250_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3394,7 +3394,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_sector_z_0_10_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3402,12 +3402,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_sector_z_0_10_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3431,7 +3431,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_sector_z_0_10_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3439,12 +3439,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_sector_z_0_10_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3468,7 +3468,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_sector_z_0_10_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3476,12 +3476,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_sector_z_0_10_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3505,7 +3505,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_sector_z_0_10_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3513,12 +3513,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_sector_z_0_10_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3542,7 +3542,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_sector_z_0_10_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3550,12 +3550,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_sector_z_0_10_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3579,7 +3579,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_sector_z_0_10_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3587,12 +3587,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_sector_z_0_10_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3616,7 +3616,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_sector_z_10_50_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3624,12 +3624,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_sector_z_10_50_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3653,7 +3653,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_sector_z_10_50_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3661,12 +3661,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_sector_z_10_50_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3690,7 +3690,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_sector_z_10_50_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3698,12 +3698,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_sector_z_10_50_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3727,7 +3727,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_sector_z_10_50_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3735,12 +3735,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_sector_z_10_50_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3764,7 +3764,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_sector_z_10_50_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3772,12 +3772,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_sector_z_10_50_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3801,7 +3801,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_sector_z_10_50_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3809,12 +3809,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_sector_z_10_50_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3838,7 +3838,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_sector_z_50_100_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3846,12 +3846,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_sector_z_50_100_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3875,7 +3875,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_sector_z_50_100_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3883,12 +3883,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_sector_z_50_100_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3912,7 +3912,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_sector_z_50_100_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3920,12 +3920,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_sector_z_50_100_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3949,7 +3949,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_sector_z_50_100_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3957,12 +3957,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_sector_z_50_100_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -3986,7 +3986,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_sector_z_50_100_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -3994,12 +3994,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_sector_z_50_100_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4023,7 +4023,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_sector_z_50_100_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4031,12 +4031,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_sector_z_50_100_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4060,7 +4060,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_sector_z_100_150_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4068,12 +4068,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_sector_z_100_150_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4097,7 +4097,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_sector_z_100_150_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4105,12 +4105,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_sector_z_100_150_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4134,7 +4134,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_sector_z_100_150_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4142,12 +4142,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_sector_z_100_150_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4171,7 +4171,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_sector_z_100_150_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4179,12 +4179,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_sector_z_100_150_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4208,7 +4208,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_sector_z_100_150_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4216,12 +4216,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_sector_z_100_150_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4245,7 +4245,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_sector_z_100_150_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4253,12 +4253,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_sector_z_100_150_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4282,7 +4282,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_sector_z_150_250_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4290,12 +4290,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_sector_z_150_250_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4319,7 +4319,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_sector_z_150_250_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4327,12 +4327,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_sector_z_150_250_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4356,7 +4356,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_sector_z_150_250_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4364,12 +4364,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_sector_z_150_250_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4393,7 +4393,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CT</name>
+				<name>dr_sector_z_150_250_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4401,12 +4401,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_sector_z_150_250_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4430,7 +4430,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_CCD</name>
+				<name>dr_sector_z_150_250_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4438,12 +4438,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_sector_z_150_250_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4467,7 +4467,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_histo_DCD</name>
+				<name>dr_sector_z_150_250_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4475,12 +4475,12 @@
 			</DATA_1>
 			<DATA_2>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_sector_z_150_250_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
-				<marker_color>845</marker_color>
-				<line_color>845</line_color>
-				<fill_color>845</fill_color>
+				<marker_color>905</marker_color>
+				<line_color>905</line_color>
+				<fill_color>905</fill_color>
 			</DATA_2>
 			<AXIS_X>
 				<name>X</name>
@@ -4504,7 +4504,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_gxy_z_0_10_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4532,7 +4532,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_gxy_z_0_10_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4549,6 +4549,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_0_10_CCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -4560,7 +4562,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_gxy_z_0_10_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4577,6 +4579,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_0_10_DCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -4588,7 +4592,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_gxy_z_0_10_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4616,7 +4620,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_gxy_z_0_10_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4633,6 +4637,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_0_10_CCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -4644,7 +4650,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_gxy_z_0_10_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4661,6 +4667,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_0_10_DCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -4672,7 +4680,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_gxy_z_10_50_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4700,7 +4708,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_gxy_z_10_50_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4717,6 +4725,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_10_50_CCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -4728,7 +4738,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_gxy_z_10_50_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4745,6 +4755,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_10_50_DCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -4756,7 +4768,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_gxy_z_10_50_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4784,7 +4796,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_gxy_z_10_50_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4801,6 +4813,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_10_50_CCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -4812,7 +4826,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_gxy_z_10_50_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4829,6 +4843,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_10_50_DCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -4840,7 +4856,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_gxy_z_50_100_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4868,7 +4884,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_gxy_z_50_100_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4885,6 +4901,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_50_100_CCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -4896,7 +4914,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_gxy_z_50_100_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4913,6 +4931,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_50_100_DCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -4924,7 +4944,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_gxy_z_50_100_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4952,7 +4972,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_gxy_z_50_100_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4969,6 +4989,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_50_100_CCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -4980,7 +5002,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_gxy_z_50_100_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -4997,6 +5019,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_50_100_DCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5008,7 +5032,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_gxy_z_100_150_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5036,7 +5060,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_gxy_z_100_150_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5053,6 +5077,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_100_150_CCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5064,7 +5090,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_gxy_z_100_150_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5081,6 +5107,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_100_150_DCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5092,7 +5120,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_gxy_z_100_150_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5120,7 +5148,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_gxy_z_100_150_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5137,6 +5165,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_100_150_CCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5148,7 +5178,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_gxy_z_100_150_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5165,6 +5195,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_100_150_DCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5176,7 +5208,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_gxy_z_150_250_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5204,7 +5236,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_gxy_z_150_250_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5221,6 +5253,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_150_250_CCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5232,7 +5266,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_gxy_z_150_250_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5249,6 +5283,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_150_250_DCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5260,7 +5296,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_gxy_z_150_250_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5288,7 +5324,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_gxy_z_150_250_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5305,6 +5341,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_150_250_CCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5316,7 +5354,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_gxy_z_150_250_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5333,6 +5371,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_gxy_z_150_250_DCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5344,7 +5384,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_lxy_z_0_10_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5372,7 +5412,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_lxy_z_0_10_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5389,6 +5429,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_0_10_CCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5400,7 +5442,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_lxy_z_0_10_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5417,6 +5459,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_0_10_DCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5428,7 +5472,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_lxy_z_0_10_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5456,7 +5500,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_lxy_z_0_10_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5473,6 +5517,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_0_10_CCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5484,7 +5530,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_lxy_z_0_10_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5501,6 +5547,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_0_10_DCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5512,7 +5560,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_lxy_z_10_50_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5540,7 +5588,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_lxy_z_10_50_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5557,6 +5605,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_10_50_CCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5568,7 +5618,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_lxy_z_10_50_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5585,6 +5635,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_10_50_DCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5596,7 +5648,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_lxy_z_10_50_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5624,7 +5676,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_lxy_z_10_50_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5641,6 +5693,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_10_50_CCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5652,7 +5706,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_lxy_z_10_50_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5669,6 +5723,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_10_50_DCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5680,7 +5736,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_lxy_z_50_100_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5708,7 +5764,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_lxy_z_50_100_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5725,6 +5781,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_50_100_CCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5736,7 +5794,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_lxy_z_50_100_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5753,6 +5811,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_50_100_DCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5764,7 +5824,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_lxy_z_50_100_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5792,7 +5852,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_lxy_z_50_100_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5809,6 +5869,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_50_100_CCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5820,7 +5882,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_lxy_z_50_100_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5837,6 +5899,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_50_100_DCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5848,7 +5912,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_lxy_z_100_150_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5876,7 +5940,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_lxy_z_100_150_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5893,6 +5957,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_100_150_CCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5904,7 +5970,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_lxy_z_100_150_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5921,6 +5987,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_100_150_DCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -5932,7 +6000,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_lxy_z_100_150_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5960,7 +6028,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_lxy_z_100_150_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -5977,6 +6045,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_100_150_CCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -5988,7 +6058,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_lxy_z_100_150_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -6005,6 +6075,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_100_150_DCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -6016,7 +6088,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_lxy_z_150_250_CT</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -6044,7 +6116,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_lxy_z_150_250_CCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -6061,6 +6133,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_150_250_CCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -6072,7 +6146,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_lxy_z_150_250_DCD</name>
 				<inputIdentifier>inputSplinevs3D</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -6089,6 +6163,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_150_250_DCD_IN_Spline_vs_3DCorr|Spline_vs_3D>
@@ -6100,7 +6176,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CT</name>
+				<name>mean_dr_lxy_z_150_250_CT</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -6128,7 +6204,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_CCD</name>
+				<name>mean_dr_lxy_z_150_250_CCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -6145,6 +6221,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{CCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_150_250_CCD_IN_Spline_vs_3DCorr|3D_for_Splines>
@@ -6156,7 +6234,7 @@
 		<PAD_1>
 			<DATA_1>
 				<type>data</type>
-				<name>str_mean_DCD</name>
+				<name>mean_dr_lxy_z_150_250_DCD</name>
 				<inputIdentifier>input3DSpline</inputIdentifier>
 				<legend_label/>
 				<drawing_option_alias>25</drawing_option_alias>
@@ -6173,6 +6251,8 @@
 			<AXIS_Z>
 				<name>Z</name>
 				<title>d#it{r}_{DCD} (#mum)</title>
+				<range_min>-18</range_min>
+				<range_max>23</range_max>
 			</AXIS_Z>
 		</PAD_1>
 	</PLOT::dr_lxy_z_150_250_DCD_IN_Spline_vs_3DCorr|3D_for_Splines>

@@ -90,6 +90,11 @@ int main(int argc, char *argv[])
   plotManager.AddInputDataFiles("inputSplinevs3D", {"/home/mhemmer/Documents/ServiceTask/Trees/CorrectionCompProfilesSplines_Average.root"});  // Comparison between Spline and 3D corr.
   plotManager.AddInputDataFiles("input3DSpline", {"/home/mhemmer/Documents/ServiceTask/Trees/CorrectionCompProfiles_Average.root"});  // Loads 3D Corr. instead of Splines, sanity check file!
   //----------------------------------------------------------------------------
+  plotManager.AddInputDataFiles("inputTrackVsCluster_NoDistoNoCorr", {"/home/mhemmer/Documents/ServiceTask/Trees/NoDisto_NoCorr.root"});  // Track vs Cluster for no disto and no corr
+  plotManager.AddInputDataFiles("inputTrackVsCluster_3DCorr", {"/home/mhemmer/Documents/ServiceTask/Trees/Disto_3DCorr.root"});  // Track vs Cluster for 3D corr
+  plotManager.AddInputDataFiles("inputTrackVsCluster_Spline", {"/home/mhemmer/Documents/ServiceTask/Trees/Disto_Spline.root"});  // Track vs Cluster for splines
+  plotManager.AddInputDataFiles("inputTrackVsCluster_OnlyDisto", {"/home/mhemmer/Documents/ServiceTask/Trees/OnlyDisto.root"});  // Track vs Cluster for only disto
+  //----------------------------------------------------------------------------
 
 
   // save these settings to a file:
@@ -99,8 +104,8 @@ int main(int argc, char *argv[])
   // plotManager.LoadInputDataFiles("/media/marvin/Samsung_T5/Analyse/OmegeAnalyseConfig.XML");
 
   // for instance the following will give you some nice default plots:
-  std::vector<int16_t> goodColors = {kGray+3, kOrange+5, kViolet+5, kTeal+5, kPink+5, kAzure+5, kSpring+5};
-  std::vector<int16_t> goodColorsRatio = {kGray+3, kOrange+5, kViolet+5, kTeal+5, kPink+5, kAzure+5, kSpring+5};
+  std::vector<int16_t> goodColors = {kGray+3, kOrange+5, kViolet+5, kPink+5, kPink+5, kAzure+5, kSpring+5};
+  std::vector<int16_t> goodColorsRatio = {kGray+3, kOrange+5, kViolet+5, kPink+5, kPink+5, kAzure+5, kSpring+5};
   std::vector<int16_t> goodColorsFill = {kGray+2, kOrange+6, kViolet+6, kTeal+6, kPink+6, kAzure+6, kSpring+6};
   std::vector<int16_t> goodColorsFillRatio = {kGray+2, kOrange+6, kViolet+6, kTeal+6, kPink+6, kAzure+6, kSpring+6};
   std::vector<int16_t> noMarker = {1, 1, 1, 1, 1, 1, 1};
@@ -222,6 +227,54 @@ int main(int argc, char *argv[])
   } // -----------------------------------------------------------------------
 
   // -------------------------------------------------------------------------
+  {
+    Plot plot("Comparisson", "DistanceX", "2d_squarelike");
+    plot.SetFigureCategory("Track_vs_Cluster");
+    plot[1].AddData("distToTrackX", "inputTrackVsCluster_NoDistoNoCorr", "no disto + no corr.");
+    plot[1].AddData("distToTrackX", "inputTrackVsCluster_3DCorr", "avg. disto + 3D corr");
+    plot[1].AddData("distToTrackX", "inputTrackVsCluster_Spline", "avg. disto + splines");
+    plot[1].AddData("distToTrackX", "inputTrackVsCluster_OnlyDisto", "avg. disto + no corr.");
+    plot[1]['X'].SetTitle("distance(track, cluster)_{x} (cm)");
+    plot[1]['Y'].SetTitle("#it{counts}");
+    plotManager.AddPlot(plot);
+  }
+  // -------------------------------------------------------------------------
+  {
+    Plot plot("Comparisson", "DistanceY", "2d_squarelike");
+    plot.SetFigureCategory("Track_vs_Cluster");
+    plot[1].AddData("distToTrackY", "inputTrackVsCluster_NoDistoNoCorr", "no disto + no corr.");
+    plot[1].AddData("distToTrackY", "inputTrackVsCluster_3DCorr", "avg. disto + 3D corr");
+    plot[1].AddData("distToTrackY", "inputTrackVsCluster_Spline", "avg. disto + splines");
+    plot[1].AddData("distToTrackY", "inputTrackVsCluster_OnlyDisto", "avg. disto + no corr.");
+    plot[1]['X'].SetTitle("distance(track, cluster)_{x} (cm)");
+    plot[1]['Y'].SetTitle("#it{counts}");
+    plotManager.AddPlot(plot);
+  }
+  // -------------------------------------------------------------------------
+  {
+    Plot plot("Comparisson", "DistanceZ", "2d_squarelike");
+    plot.SetFigureCategory("Track_vs_Cluster");
+    plot[1].AddData("distToTrackZ", "inputTrackVsCluster_NoDistoNoCorr", "no disto + no corr.");
+    plot[1].AddData("distToTrackZ", "inputTrackVsCluster_3DCorr", "avg. disto + 3D corr");
+    plot[1].AddData("distToTrackZ", "inputTrackVsCluster_Spline", "avg. disto + splines");
+    plot[1].AddData("distToTrackZ", "inputTrackVsCluster_OnlyDisto", "avg. disto + no corr.");
+    plot[1]['X'].SetTitle("distance(track, cluster)_{x} (cm)");
+    plot[1]['Y'].SetTitle("#it{counts}");
+    plotManager.AddPlot(plot);
+  }
+  // -------------------------------------------------------------------------
+  {
+    Plot plot("Comparisson", "Distance", "2d_squarelike");
+    plot.SetFigureCategory("Track_vs_Cluster");
+    plot[1].AddData("distToTrack", "inputTrackVsCluster_NoDistoNoCorr", "no disto + no corr.");
+    plot[1].AddData("distToTrack", "inputTrackVsCluster_3DCorr", "avg. disto + 3D corr");
+    plot[1].AddData("distToTrack", "inputTrackVsCluster_Spline", "avg. disto + splines");
+    plot[1].AddData("distToTrack", "inputTrackVsCluster_OnlyDisto", "avg. disto + no corr.");
+    plot[1]['X'].SetTitle("distance(track, cluster)_{x} (cm)");
+    plot[1]['Y'].SetTitle("#it{counts}");
+    plotManager.AddPlot(plot);
+  }
+  // -------------------------------------------------------------------------
   for ( int i_var = 0; i_var < Variable.size(); i_var++)
   {
     for (int i_axis = 0; i_axis < Axis.size(); i_axis++)
@@ -253,7 +306,7 @@ int main(int argc, char *argv[])
               Plot plot(str_histo_CT.Data(), "Spline_vs_3DCorr", "2d_squarelike");
               plot.SetFigureCategory(vStructure.at(i_input));
               plot[1].AddData(str_histo_CT.Data(), vInput.at(i_input), "").SetContours(255).SetOptions(colz);
-              plot[1].AddData(str_mean_CT.Data(), vInput.at(i_input), "").SetColor(kTeal+5);
+              plot[1].AddData(str_mean_CT.Data(), vInput.at(i_input), "").SetColor(kPink+5);
               plot[1]['X'].SetTitle(AxisText_2.at(i_axis));
               plot[1]['Y'].SetTitle(Var_CT);
               plot[1]['Z'].SetTitle("#it{counts}");
@@ -265,7 +318,7 @@ int main(int argc, char *argv[])
               Plot plot(str_histo_CCD.Data(), "Spline_vs_3DCorr", "2d_squarelike");
               plot.SetFigureCategory(vStructure.at(i_input));
               plot[1].AddData(str_histo_CCD.Data(), vInput.at(i_input), "").SetContours(255).SetOptions(colz);
-              plot[1].AddData(str_mean_CCD.Data(), vInput.at(i_input), "").SetColor(kTeal+5);
+              plot[1].AddData(str_mean_CCD.Data(), vInput.at(i_input), "").SetColor(kPink+5);
               plot[1]['X'].SetTitle(AxisText_2.at(i_axis));
               plot[1]['Y'].SetTitle(Var_CCD);
               plot[1]['Z'].SetTitle("#it{counts}");
@@ -277,7 +330,7 @@ int main(int argc, char *argv[])
               Plot plot(str_histo_DCD.Data(), "Spline_vs_3DCorr", "2d_squarelike");
               plot.SetFigureCategory(vStructure.at(i_input));
               plot[1].AddData(str_histo_DCD.Data(), vInput.at(i_input), "").SetContours(255).SetOptions(colz);
-              plot[1].AddData(str_mean_DCD.Data(), vInput.at(i_input), "").SetColor(kTeal+5);
+              plot[1].AddData(str_mean_DCD.Data(), vInput.at(i_input), "").SetColor(kPink+5);
               plot[1]['X'].SetTitle(AxisText_2.at(i_axis));
               plot[1]['Y'].SetTitle(Var_DCD);
               plot[1]['Z'].SetTitle("#it{counts}");
